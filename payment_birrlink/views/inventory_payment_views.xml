@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    BirrLink Invoice Payment Views
+    
+    Developed by Fkadeal Matiwos
+    GitHub: https://github.com/fkadeal
+    Company: BirrLink Financial Technology
+-->
+<odoo>
+    <!-- Add Pay with BirrLink and Verify Payment buttons to invoice form -->
+    <record id="view_account_invoice_birrlink_buttons_form" model="ir.ui.view">
+        <field name="name">account.invoice.birrlink.buttons.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button name="action_pay_with_birrlink" 
+                        string="Pay with BirrLink" 
+                        type="object" 
+                        class="oe_highlight"
+                        attrs="{'invisible': [('state', 'not in', ['open'])]}"/>
+                <button name="action_verify_birrlink_payment" 
+                        string="Verify Payment" 
+                        type="object" 
+                        class="oe_highlight"
+                        attrs="{'invisible': [('state', 'not in', ['open'])]}"/>
+            </header>
+        </field>
+    </record>
+</odoo>

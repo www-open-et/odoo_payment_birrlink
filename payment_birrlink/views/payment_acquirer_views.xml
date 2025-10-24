@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    BirrLink Payment Acquirer Views
+    
+    Developed by Fkadeal Matiwos
+    GitHub: https://github.com/fkadeal
+    Company: BirrLink Financial Technology
+-->
+<odoo>
+
+    <record id="birrlink_acquirer_form" model="ir.ui.view">
+        <field name="name">Birrlink Acquirer Form</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <group name="acquirer" position="inside">
+                <group attrs="{'invisible': [('provider', '!=', 'birrlink')]}"
+                       name="birrlink_credentials">
+                    <field name="birrlink_public_key"
+                           string="Public Key"
+                           attrs="{'required':[('provider', '=', 'birrlink')]}"/>
+                    <field name="birrlink_secret_key"
+                           string="Secret Key"
+                           attrs="{'required':[('provider', '=', 'birrlink')]}"
+                           password="True"/>
+                    <field name="birrlink_webhook_secret"
+                           string="Webhook Secret"
+                           attrs="{'required':[('provider', '=', 'birrlink')]}"
+                           password="True"/>
+                    <field name="birrlink_return_url"
+                           string="Return URL"
+                           attrs="{'required':[('provider', '=', 'birrlink')]}"/>
+                    <field name="birrlink_auth_return_url"
+                           string="Auth Return URL"
+                           attrs="{'required':[('provider', '=', 'birrlink')]}"/>
+                    <field name="birrlink_webhook_url"
+                           string="Webhook URL"
+                           attrs="{'required':[('provider', '=', 'birrlink')]}"/>
+                </group>
+            </group>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    BirrLink Payment Templates
+    
+    Developed by Fkadeal Matiwos
+    GitHub: https://github.com/fkadeal
+    Company: BirrLink Financial Technology
+-->
+<odoo>
+
+    <template id="redirect_form" name="BirrLink Redirect Form">
+        <form t-att-action="tx_url" method="post" class="redirect-form">
+            <input type="hidden" name="acquirer_id" t-att-value="acquirer.id"/>
+            <input type="hidden" name="reference" t-att-value="reference"/>
+            <input type="hidden" name="amount" t-att-value="amount"/>
+            <input type="hidden" name="currency" t-att-value="currency.name"/>
+            <input type="hidden" name="partner_name" t-att-value="partner_name"/>
+            <input type="hidden" name="partner_email" t-att-value="partner_email"/>
+            <input type="hidden" name="partner_phone" t-att-value="partner_phone"/>
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <input type="submit" t-att-value="submit_txt or 'Pay with BirrLink'" t-att-class="submit_class or 'btn btn-primary'"/>
+        </form>
+    </template>
+
+</odoo>
