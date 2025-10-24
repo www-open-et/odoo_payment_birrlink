@@ -5,15 +5,14 @@
     'category': 'Accounting/Payment Acquirers',
     'sequence': 1,
     'summary': "Ethiopian Payment Acquirer",
-    'description': """
-<h1>BirrLink Payment Gateway Integration</h1>
-<p>Company: BirrLink Financial Technology</p>
-<p>This module integrates BirrLink payment gateway with Odoo, providing seamless payment processing capabilities for businesses operating in Ethiopia and the African region.</p>
-<h2>Developed by:</h2>
-<p>Fkadeal Matiwos</p>
-<p>GitHub: <a href="https://github.com/fkadeal">https://github.com/fkadeal</a></p>
-
-    """,
+    'description': """<div>
+        <h1>BirrLink Payment Gateway Integration</h1>
+        <p>Company: BirrLink Financial Technology</p>
+        <p>This module integrates BirrLink payment gateway with Odoo, providing seamless payment processing capabilities for businesses operating in Ethiopia and the African region.</p>
+        <h2>Developed by:</h2>
+        <p>Fkadeal Matiwos</p>
+        <p>GitHub: <a href="https://github.com/fkadeal">https://github.com/fkadeal</a></p>
+        </div>""",
     'images': ['static/description/cover.png'],
     'depends': ['payment', 'account'],
     'data': [
