@@ -18,7 +18,7 @@
     'uninstall_hook': 'uninstall_hook',
     'application': False,
     'license': 'LGPL-3',
-    'author': 'Fkadeal Matiwos',
-    'website': 'https://github.com/fkadeal',
+    'author': 'BirrLink Financial Technology',
+    'website': 'https://birrlink.et',
     'maintainer': 'BirrLink Financial Technology',
 }
